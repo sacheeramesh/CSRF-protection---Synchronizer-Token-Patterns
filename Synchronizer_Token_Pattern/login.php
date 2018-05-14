@@ -10,13 +10,7 @@
 </head>
 <body>
 	<?php	
-		if(isset($_POST['submit']))
-		{
-    		ob_end_clean(); 
-    
-    
-    		if($_POST['user_name'] =="admin" && $_POST['user_pswd'] =="123") //loggin user
-    		{
+		
 				//Create session in  browser
 				session_start();
 
@@ -65,21 +59,16 @@
 				</form>';
 
 				
-					if(isset($_COOKIE['session_id']))
-					{ 
+					//if(isset($_COOKIE['session_id']))
+					//{ 
 						echo '<script> var token = loadDOC("POST","server.php","csToken");  </script>'; 
-					}
+					//}
 
 				
 
 
-    		}
-    		else
-    		{
-				header( "Location:other/errorlogin.html" );
-    		}
+    		
 
-		}
 
 
 ?>
